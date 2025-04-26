@@ -32,3 +32,17 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+textarea {
+    resize: none;
+}
+
+input, textarea {
+    background-color: var(--gray);
+    transition: .5s;
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: none;
+    background-color: white;
+}
