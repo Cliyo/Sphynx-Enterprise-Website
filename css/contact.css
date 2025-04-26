@@ -75,3 +75,9 @@
 .form-submit:hover {
     background-color: var(--primary-color-dark);
 }
+
+@media (max-width: 1073px) {
+    .contact-form {
+        width: 100%;
+    }
+}

@@ -38,7 +38,7 @@
                         <button> <img src="/assets/img/whatsApp.svg" width="28px" /> Entre em contato</button>
                     </a>
                 </div>
-                <img src="/assets/img/logo.png" alt="Sphynx_Logo" width="620px" />
+                <img class="sphynx-logo" src="/assets/img/logo.png" alt="Sphynx_Logo" width="620px" />
             </div>
         </section>
         <section id="about" class="about">
@@ -65,18 +65,18 @@
         <section id="contact" class="contact">
             <div class="contact-container">
                 <h1 class="contact-title">Contato</h1>
-                <form class="contact-form" action="#" method="post">
+                <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Nome:</label>
                         <input type="text" id="name" name="name" placeholder="Digite aqui..." required>
                     </div>
                     <div class="form-group">
                         <label for="name">Email:</label>
-                        <input type="email" id="name" name="name" placeholder="Digite aqui..." required>
+                        <input type="email" id="email" name="email" placeholder="Digite aqui..." required>
                     </div>
                     <div class="form-group">
                         <label for="name">Mensagem:</label>
-                        <textarea type="text" id="name" name="name" placeholder="Digite aqui..." required> </textarea>
+                        <textarea type="text" id="message" name="message" placeholder="Digite aqui..." required> </textarea>
                     </div>
                     <button class="form-submit" type="submit">Enviar</button>
                 </form>
@@ -87,4 +87,20 @@
         &copy; 2025 Cliyo. Todos os direitos reservados.
     </footer>
 </body>
+<script>
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        sendEmail();
+    });
+    function sendEmail() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        const subject = "Contato do site";
+        const body = `Nome: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMensagem:%0D%0A${message}`;
+        
+        window.location.href = `mailto:pedrohvidals@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+</script>
 </html>

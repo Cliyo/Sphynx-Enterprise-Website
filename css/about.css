@@ -48,3 +48,28 @@
     color: var(--gray-dark);
     text-align: justify;
 }
+
+@media (max-width: 1093px) {
+    .about-cards {
+        grid-template-columns: auto auto;
+    }
+
+    .about-cards :last-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 755px) {
+
+    .about {
+        padding: 84px 10%;
+    }
+
+    .about-cards {
+        grid-template-columns: auto;
+    }
+
+    .about-cards :last-child {
+        grid-column: span 1;
+    }
+}

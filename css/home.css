@@ -77,3 +77,19 @@
 .home-button button:hover {
     background-color: var(--primary-color-dark);
 }
+
+@media (max-width: 1363px) {
+    .sphynx-logo{
+        width: 420px;
+    }
+}
+
+@media (max-width: 1056px) {
+    .sphynx-logo{
+        display: none;
+    }
+
+    .text-container{
+        width: 100%;
+    }
+}

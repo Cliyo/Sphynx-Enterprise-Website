@@ -36,3 +36,9 @@ nav ul li a {
     color: #fff;
     font-size: 2rem;
 }
+
+@media (max-width: 825px) {
+    nav {
+        display: none;
+    }
+}
