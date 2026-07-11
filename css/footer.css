@@ -1,8 +1,40 @@
 footer {
     display: flex;
-
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 24px 10%;
+    color: #c9d7da;
+    background: #001115;
+    font-size: 1.4rem;
+}
 
-    padding: 8px 0;
+footer div {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--primary-color);
+    font-weight: 800;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+@media (max-width: 720px) {
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 7%;
+    }
+
+    footer div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
 }

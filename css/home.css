@@ -1,95 +1,151 @@
 .home {
-    height: 100vh;
+    min-height: 82vh;
     background-image: url("../assets/img/background.png");
     background-size: cover;
+    background-position: center;
 }
 
-.home-container{
-    width: 100%;
-    height: 100%;
-
-    padding: 0 10%;
-
-    align-items: center;
-    justify-content: space-between;
-    
-    backdrop-filter: blur(8px);
-    background-color: #00000098;
-}
-
-.text-container{
-    width: 860px;
-
-    flex-direction: column;
-
-    border-top: 1px solid var(--primary-color);
-    border-bottom: 1px solid var(--primary-color);
-
-    padding: 24px 0;
-    gap: 14px;
-}
-
-.home-title{
-    color: #fff;
-    font-size: 4rem;
-    font-weight: bold;
-}
-
-.home-title span{
-    color: var(--primary-color);
-}
-
-.home-description{
-    color: var(--gray);
-    font-size: 1.6rem;
-}
-
-.home-button {
-    width: 240px;
-    height: 60px;
-
-    text-decoration: none;
-}
-
-.home-button button {
+.home-overlay {
+    position: relative;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
+    min-height: 82vh;
+    padding: 128px 10% 76px;
 
-    width: 100%;
-    height: 100%;
+    background:
+        linear-gradient(90deg, #00191ff5 0%, #00191fd9 46%, #00191f66 100%);
+}
 
-    background-color: var(--primary-color);
+.home-overlay::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    width: 390px;
+    height: 390px;
+    pointer-events: none;
+    transform: translateY(-50%);
+
+    background-image: url("../assets/img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 1;
+    filter: drop-shadow(0 30px 58px #0000008c);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: min(820px, 100%);
+}
+
+.hero-content h1 {
+    margin: 10px 0 18px;
     color: #fff;
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 9.2rem;
+    font-weight: 700;
+    line-height: .92;
+}
 
-    gap: 8px;
+.hero-description {
+    max-width: 620px;
+    color: #d8e5e8;
+    font-size: 2rem;
+    line-height: 1.65;
+}
 
+.hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 34px;
+}
+
+.primary-action,
+.secondary-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0 22px;
     border-radius: 8px;
-    border: none;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
+    font-size: 1.55rem;
+    font-weight: 800;
+    transition: .2s ease;
 }
 
-.home-button button:hover {
-    background-color: var(--primary-color-dark);
+.primary-action {
+    gap: 9px;
+    color: #fff;
+    background: var(--primary-color);
 }
 
-@media (max-width: 1363px) {
-    .sphynx-logo{
-        width: 420px;
+.primary-action:hover {
+    background: var(--primary-color-dark);
+}
+
+.secondary-action {
+    color: #fff;
+    border: 1px solid #ffffff38;
+}
+
+.secondary-action:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: #ffffff0c;
+}
+
+@media (max-width: 860px) {
+    .home,
+    .home-overlay {
+        min-height: 78vh;
+    }
+
+    .home-overlay {
+        padding: 112px 7% 58px;
+        background:
+            linear-gradient(90deg, #00191ff7 0%, #00191fe8 62%, #00191f95 100%);
+    }
+
+    .home-overlay::after {
+        right: 6%;
+        top: 50%;
+        width: 260px;
+        height: 260px;
+        opacity: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 6.2rem;
+    }
+
+    .hero-description {
+        font-size: 1.75rem;
     }
 }
 
-@media (max-width: 1056px) {
-    .sphynx-logo{
-        display: none;
+@media (max-width: 560px) {
+    .home-overlay::after {
+        right: -54px;
+        top: 62%;
+        width: 210px;
+        height: 210px;
+        opacity: 1;
     }
 
-    .text-container{
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .hero-actions {
+        width: 100%;
+    }
+
+    .primary-action,
+    .secondary-action {
         width: 100%;
     }
 }

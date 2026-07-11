@@ -6,105 +6,163 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sphynx é uma solução de controle de acesso da Cliyo com módulo físico, sensores e painel web.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="shortcut icon" href="/assets/img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
     <title>Cliyo | Sphynx</title>
 </head>
 <body>
-    <header>
-        <h1>Cliyo</h1>
-        <nav>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Voltar para o início">
+            <img src="assets/img/logo.png" alt="" width="42" height="42">
+            <span>
+                <strong>Sphynx</strong>
+                <small>por Cliyo</small>
+            </span>
+        </a>
+        <nav aria-label="Navegação principal">
             <ul>
-                <li><a href="#home">Home</a></li>
                 <li><a href="#about">Produto</a></li>
+                <li><a href="#flow">Fluxo</a></li>
                 <li><a href="#contact">Contato</a></li>
+                <li><a href="https://github.com/orgs/Cliyo/repositories" target="_blank" rel="noopener noreferrer">Código fonte</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <section id="home" class="home">
-            <div class="home-container">
-                <div class="text-container">
-                    <h1 class="home-title">
-                        Segurança Barata <br> & <span class="title-highlight">Eficiente</span> para você
-                    </h1>
-                    <p class="home-description">
-                        A Cliyo é uma startup inovadora que foi criada para fornecer soluções de segurança residencial acessíveis e eficazes.
-                        Por acaso já passou por uma situação em que se sentiu inseguro em sua própria casa? Mas por conta do alto custo não conseguiu um sistema eficaz?
-                        O Sphynx é a solução para você!
+            <div class="home-overlay">
+                <div class="hero-content">
+                    <p class="eyebrow">Controle de acesso acessível</p>
+                    <h1>Sphynx</h1>
+                    <p class="hero-description">
+                        Segurança simples, inteligente e viável para ambientes que precisam organizar quem entra e quem sai.
                     </p>
-                    <a href="https://wa.me/5511957832406" class="home-button">
-                        <button> <img src="/assets/img/whatsApp.svg" width="28px" /> Entre em contato</button>
-                    </a>
+                    <div class="hero-actions">
+                        <a class="primary-action" href="https://wa.me/5511957832406">
+                            <img src="assets/img/whatsApp.svg" width="22" height="22" alt="">
+                            Falar sobre o produto
+                        </a>
+                        <a class="secondary-action" href="#about">Conhecer o Sphynx</a>
+                    </div>
                 </div>
-                <img class="sphynx-logo" src="/assets/img/logo.png" alt="Sphynx_Logo" width="620px" />
             </div>
         </section>
+
         <section id="about" class="about">
-            <h1 class="about-title">Sobre o Sphynx</h1>
-            <p class="about-text">Como já foi dito anteriormente, o Sphynx é um sistema de segurança eficaz e custo-benefício</p>
-            <div class="about-cards">
-                <div class="card">
-                    <img src="/assets/img/tecnologia.svg" alt="Tecnologia_Icon" width="100px">
-                    <h2>Tecnologias</h2>
-                    <p>O Sphynx possui o módulo físico equipado com ótimos sensores para liberação da tranca magnética, além do módulo web para controle de fluxo</p>
-                </div>
-                <div class="card">
-                    <img src="/assets/img/money.svg" alt="Dinheiro_Icon" width="100px">
-                    <h2>Custo</h2>
-                    <p>Como missão do Sphynx temos o barateamento, por conta disso usamos sensores de baixo custo no produto final para reduzirmos o custo de produção</p>
-                </div>
-                <div class="card">
-                    <img src="/assets/img/locals.svg" alt="Local_Icon" width="100px">
-                    <h2>Locais</h2>
-                    <p>Por conta de seu módulo Web para controle de fluxo, o Sphynx pode além de em residências ser usado em escolas ou hospitais para controle de entrada e saída</p>
-                </div>
+            <div class="section-intro">
+                <p class="eyebrow">Produto</p>
+                <h2>Um sistema enxuto para controlar quem entra, quem sai e quando.</h2>
+                <p>
+                    Depois da primeira impressão, aqui entra o detalhe: o Sphynx combina sensores, tranca magnética e painel web para trocar improviso por controle claro.
+                </p>
+            </div>
+
+            <div class="value-grid">
+                <article class="value-card">
+                    <img src="assets/img/tecnologia.svg" alt="" width="64" height="64">
+                    <h3>Hardware integrado</h3>
+                    <p>Sensores e tranca magnética trabalham juntos para liberar, bloquear e registrar eventos de acesso.</p>
+                </article>
+                <article class="value-card">
+                    <img src="assets/img/money.svg" alt="" width="64" height="64">
+                    <h3>Custo sob controle</h3>
+                    <p>A proposta prioriza componentes acessíveis e uma arquitetura objetiva para reduzir o custo final.</p>
+                </article>
+                <article class="value-card">
+                    <img src="assets/img/locals.svg" alt="" width="64" height="64">
+                    <h3>Uso em vários locais</h3>
+                    <p>Funciona para casas, escolas, clínicas, portarias e ambientes que precisam organizar o fluxo de pessoas.</p>
+                </article>
             </div>
         </section>
+
+        <section id="flow" class="flow-section">
+            <div class="flow-copy">
+                <p class="eyebrow">Fluxo</p>
+                <h2>Do sensor ao painel, tudo conversa no mesmo processo.</h2>
+            </div>
+            <div class="flow-steps">
+                <article>
+                    <span>01</span>
+                    <h3>Identifica</h3>
+                    <p>O módulo físico detecta a tentativa de acesso no ponto de entrada.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Aciona</h3>
+                    <p>A tranca magnética responde conforme a lógica definida para o ambiente.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Registra</h3>
+                    <p>O painel web ajuda a acompanhar eventos e entender o fluxo do local.</p>
+                </article>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div class="contact-container">
-                <h1 class="contact-title">Contato</h1>
+                <div class="contact-copy">
+                    <p class="eyebrow">Contato</p>
+                    <h2>Vamos conversar sobre o Sphynx?</h2>
+                    <p>
+                        Conte onde você pretende usar o produto e o email será montado automaticamente para pedrohvidals@gmail.com.
+                    </p>
+                    <a class="contact-source-link" href="https://github.com/orgs/Cliyo/repositories" target="_blank" rel="noopener noreferrer">Abrir repositórios da Cliyo</a>
+                </div>
+
                 <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome:</label>
-                        <input type="text" id="name" name="name" placeholder="Digite aqui..." required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="name">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Digite aqui..." required>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Descreva sua dúvida ou cenário de uso" required></textarea>
                     </div>
-                    <div class="form-group">
-                        <label for="name">Mensagem:</label>
-                        <textarea type="text" id="message" name="message" placeholder="Digite aqui..." required> </textarea>
-                    </div>
-                    <button class="form-submit" type="submit">Enviar</button>
+                    <button class="form-submit" type="submit">Enviar mensagem</button>
                 </form>
             </div>
         </section>
     </main>
+
     <footer>
-        &copy; 2025 Cliyo. Todos os direitos reservados.
+        <span>&copy; 2026 Cliyo. Sphynx.</span>
+        <div>
+            <a href="mailto:pedrohvidals@gmail.com">pedrohvidals@gmail.com</a>
+            <a href="https://github.com/orgs/Cliyo/repositories" target="_blank" rel="noopener noreferrer">Código fonte</a>
+        </div>
     </footer>
+
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            sendEmail();
+        });
+
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const subject = "Contato sobre o Sphynx";
+            const body = `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`;
+
+            window.location.href = `mailto:pedrohvidals@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+    </script>
 </body>
-<script>
-    document.querySelector('.contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        sendEmail();
-    });
-    function sendEmail() {
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        const subject = "Contato do site";
-        const body = `Nome: ${name}\nEmail: ${email}\nMensagem:${message}`;
-        
-        window.location.href = `mailto:cliyo.oficial@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
-</script>
 </html>

@@ -1,76 +1,175 @@
 .about {
-    flex-direction: column;
-
-    padding: 84px 0;
+    padding: 92px 10%;
+    background: #fff;
 }
 
-.about-title {
-    font-size: 5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #000;
-    text-align: center;
-}
-
-.about-text {
-    font-size: 1.2rem;
-    color: var(--gray-darker);
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.about-cards {
+.section-intro {
     display: grid;
-    grid-template-columns: auto auto auto;
-
-    gap: 120px;
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: end;
+    max-width: 1180px;
+    margin: 0 auto 42px;
 }
 
-.card{
-    flex-direction: column;
-
-    align-items: center;
-    justify-content: center;
-
-    width: 260px;
-
-    gap: 8px;
+.section-intro .eyebrow {
+    grid-column: 1;
 }
 
-.card h2 {
+.section-intro h2,
+.flow-copy h2 {
+    color: var(--primary-color-darker);
+    font-size: 4.6rem;
+    line-height: 1.05;
+}
+
+.section-intro h2 {
+    grid-column: 1;
+}
+
+.section-intro p:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: end;
+    color: var(--muted);
+    font-size: 1.7rem;
+    line-height: 1.7;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.value-card {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    min-height: 310px;
+    padding: 30px;
+
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: .2s ease;
+}
+
+.value-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.value-card img {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+}
+
+.value-card h3,
+.flow-steps h3 {
+    color: var(--primary-color-darker);
+    font-size: 2.2rem;
+    line-height: 1.15;
+}
+
+.value-card p,
+.flow-steps p {
+    color: var(--muted);
     font-size: 1.5rem;
-    font-weight: bold;
+    line-height: 1.65;
+}
+
+.flow-section {
+    display: grid;
+    grid-template-columns: minmax(260px, .55fr) minmax(0, 1fr);
+    gap: 56px;
+    padding: 92px 10%;
+    color: #fff;
+    background: var(--primary-color-darker);
+}
+
+.flow-copy {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+}
+
+.flow-copy h2 {
+    color: #fff;
+}
+
+.flow-steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1px;
+    overflow: hidden;
+    border: 1px solid #ffffff1f;
+    border-radius: 8px;
+}
+
+.flow-steps article {
+    display: grid;
+    align-content: start;
+    gap: 14px;
+    min-height: 260px;
+    padding: 28px;
+    background: #ffffff0b;
+}
+
+.flow-steps span {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 800;
 }
 
-.card p {
-    font-size: 1rem;
-    color: var(--gray-dark);
-    text-align: justify;
+.flow-steps h3 {
+    color: #fff;
 }
 
-@media (max-width: 1093px) {
-    .about-cards {
-        grid-template-columns: auto auto;
+.flow-steps p {
+    color: #d1dddf;
+}
+
+@media (max-width: 980px) {
+    .section-intro,
+    .flow-section {
+        grid-template-columns: 1fr;
     }
 
-    .about-cards :last-child {
-        grid-column: span 2;
+    .section-intro .eyebrow,
+    .section-intro h2,
+    .section-intro p:last-child {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .value-grid,
+    .flow-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .value-card,
+    .flow-steps article {
+        min-height: 0;
     }
 }
 
-@media (max-width: 755px) {
-
-    .about {
-        padding: 84px 10%;
+@media (max-width: 680px) {
+    .about,
+    .flow-section {
+        padding: 72px 7%;
     }
 
-    .about-cards {
-        grid-template-columns: auto;
+    .section-intro h2,
+    .flow-copy h2 {
+        font-size: 3.4rem;
     }
 
-    .about-cards :last-child {
-        grid-column: span 1;
+    .value-card,
+    .flow-steps article {
+        padding: 24px;
     }
 }
